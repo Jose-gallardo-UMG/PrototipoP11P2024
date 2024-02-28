@@ -1,5 +1,6 @@
 //José Eduardo Gallardo Del Cid
 //Carné 9959-23-106
+//Variante U "Programa partidos"
 
 
 
@@ -14,19 +15,19 @@
 using namespace std;
 
 #define NOMBRE_CANDIDATOS 5
-#define NUM_ANOS 4
+#define NUMERO_ANOS 4
 #define MAX_VOTOS 100
 
 void PideNombres(string nomcandidatosa[NOMBRE_CANDIDATOS]);
-void llenarMatrizpr(int matrizpr[NOMBRE_CANDIDATOS][NUM_ANOS]);
-void llenarMatrizpd(int matrizpd[NOMBRE_CANDIDATOS][NUM_ANOS]);
-void llenarMatrizpi(int matrizpi[NOMBRE_CANDIDATOS][NUM_ANOS]);
+void llenarMatrizpr(int matrizpr[NOMBRE_CANDIDATOS][NUMERO_ANOS]);
+void llenarMatrizpd(int matrizpd[NOMBRE_CANDIDATOS][NUMERO_ANOS]);
+void llenarMatrizpi(int matrizpi[NOMBRE_CANDIDATOS][NUMERO_ANOS]);
 void imprimirMatrizLinea();
 int generarNumAle();
 
 int main()
 {
-    int x, y, i, j, matriza[NOMBRE_CANDIDATOS][NUM_ANOS], matrizb[NOMBRE_CANDIDATOS][NUM_ANOS], matrizc[NOMBRE_CANDIDATOS][NUM_ANOS];
+    int x, y, i, j, matriza[NOMBRE_CANDIDATOS][NUMERO_ANOS], matrizb[NOMBRE_CANDIDATOS][NUMERO_ANOS], matrizc[NOMBRE_CANDIDATOS][NUMERO_ANOS];
     int totala=0, totalb=0, totalc=0, totald=0, totale=0;
     string nomcandidatob[NOMBRE_CANDIDATOS];
     PideNombres(nomcandidatob);
@@ -40,13 +41,13 @@ int main()
     cout << "\n";
     llenarMatrizpr(matriza);
     imprimirMatrizLinea();
-    cout << "| " << "Candidatos" << setw(9) << " AÑO 2017" << setw(9) << "AÑO 2019" << setw(9) << "AÑO 2021" << setw(9) << "AÑO 2023" << "|" << endl;
+    cout << "| " << "Cand." << setw(9) << " Ano 2017" << setw(9) << "Ano 2019" << setw(9) << "Ano 2021" << setw(9) << "Ano 2023" << "|" << endl;
     imprimirMatrizLinea();
 
     for (y=0 ; y<NOMBRE_CANDIDATOS ; y++)
     {
        cout << "!" << setw(8) << nomcandidatob[y] << "!";
-       for (x=0 ; x<NUM_ANOS ; x++)
+       for (x=0 ; x<NUMERO_ANOS ; x++)
        {
            cout << setw(8) << matriza[y][x] << "!";
        }
@@ -68,13 +69,13 @@ int main()
     cout << "\n";
     llenarMatrizpd(matrizb);
     imprimirMatrizLinea();
-    cout << "| " << "Nombres" << setw(9) << "2017" << setw(9) << "2019" << setw(9) << "2021" << setw(9) << "2023" << "|" << endl;
+    cout << "| " << "Cand." << setw(9) << "Ano 2017" << setw(9) << "Ano 2019" << setw(9) << "Ano 2021" << setw(9) << "Ano 2023" << "|" << endl;
     imprimirMatrizLinea();
 
     for (y=0 ; y<NOMBRE_CANDIDATOS ; y++)
     {
        cout << "!" << setw(8) << nomcandidatob[y] << "!";
-       for (x=0 ; x<NUM_ANOS ; x++)
+       for (x=0 ; x<NUMERO_ANOS ; x++)
        {
            cout << setw(8) << matrizb[y][x] << "!";
        }
@@ -96,13 +97,13 @@ int main()
     cout << "\n";
     llenarMatrizpi(matrizc);
     imprimirMatrizLinea();
-    cout << "| " << "Nombres" << setw(9) << "2017" << setw(9) << "2019" << setw(9) << "2021" << setw(9) << "2023" << "|" << endl;
+    cout << "| " << "Cand." << setw(9) << "Ano 2017" << setw(9) << "Ano 2019" << setw(9) << "Ano 2021" << setw(9) << "Ano 2023" << "|" << endl;
     imprimirMatrizLinea();
 
     for (y=0 ; y<NOMBRE_CANDIDATOS ; y++)
     {
        cout << "!" << setw(8) << nomcandidatob[y] << "!";
-       for (x=0 ; x<NUM_ANOS ; x++)
+       for (x=0 ; x<NUMERO_ANOS ; x++)
        {
            cout << setw(8) << matrizc[y][x] << "!";
        }
@@ -199,43 +200,43 @@ void imprimirMatrizLinea()
     int x;
 
     cout << "+--------";
-    for (x = 0; x < NUM_ANOS; x++)
+    for (x = 0; x < NUMERO_ANOS; x++)
     {
         cout << "+--------";
     }
     cout << "+\n";
 }
 
-void llenarMatrizpr(int matrizpr[NOMBRE_CANDIDATOS][NUM_ANOS])
+void llenarMatrizpr(int matrizpr[NOMBRE_CANDIDATOS][NUMERO_ANOS])
 {
     //Llena matriz del partido republicano
 
     for (int i = 0; i < NOMBRE_CANDIDATOS; ++i) {
-        for (int j = 0; j < NUM_ANOS; ++j) {
+        for (int j = 0; j < NUMERO_ANOS; ++j) {
             matrizpr[i][j] = generarNumAle();
         }
     }
 
 }
 
-void llenarMatrizpd(int matrizpd[NOMBRE_CANDIDATOS][NUM_ANOS])
+void llenarMatrizpd(int matrizpd[NOMBRE_CANDIDATOS][NUMERO_ANOS])
 {
     //Llena matriz del partido Demócrata
 
     for (int i = 0; i < NOMBRE_CANDIDATOS; ++i) {
-        for (int j = 0; j < NUM_ANOS; ++j) {
+        for (int j = 0; j < NUMERO_ANOS; ++j) {
             matrizpd[i][j] = generarNumAle();
         }
     }
 
 }
 
-void llenarMatrizpi(int matrizpi[NOMBRE_CANDIDATOS][NUM_ANOS])
+void llenarMatrizpi(int matrizpi[NOMBRE_CANDIDATOS][NUMERO_ANOS])
 {
     //Llena matriz del partido Independiente
 
     for (int i = 0; i < NOMBRE_CANDIDATOS; ++i) {
-        for (int j = 0; j < NUM_ANOS; ++j) {
+        for (int j = 0; j < NUMERO_ANOS; ++j) {
             matrizpi[i][j] = generarNumAle();
         }
     }
