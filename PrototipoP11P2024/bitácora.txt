@@ -1,0 +1,30 @@
+Jose@LAPTOP-B55ILB8J MINGW64 /d/UMG/programacion1/parcial 1/PrototipoP11P2024/PrototipoP11P2024 (main)
+$ git log
+commit c010e0466033828cd4b06090a11401433351a008 (HEAD -> main)
+Author: José Eduardo Gallardo Del Cid <jgallardod@miumg.edu.gt>
+Date:   Wed Feb 28 10:34:36 2024 -0600
+
+    commit 5
+
+commit 1914a31172c4baaaa9f3393300468131d3dfe913
+Author: José Eduardo Gallardo Del Cid <jgallardod@miumg.edu.gt>
+Date:   Wed Feb 28 10:28:26 2024 -0600
+
+    commit 3
+
+commit 64b9eb657883231c35e279b1bdc68e2e02097783
+Author: José Eduardo Gallardo Del Cid <jgallardod@miumg.edu.gt>
+Date:   Wed Feb 28 10:23:21 2024 -0600
+
+    commit 4
+
+commit 21eeb9b37297f3a194e1876a1b3358179be069be
+Author: José Eduardo Gallardo Del Cid <jgallardod@miumg.edu.gt>
+Date:   Wed Feb 28 10:16:58 2024 -0600
+
+    commit 2
+commit 258aaa83271b67fe267c9a8efe931d97075ce2d1
+Author: José Eduardo Gallardo Del Cid <jgallardod@miumg.edu.gt>
+Date:   Wed Feb 28 10:10:39 2024 -0600
+
+    commit 1
