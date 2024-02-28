@@ -20,6 +20,7 @@ using namespace std;
 #define NUMERO_ANOS 4
 #define MAXIMO_VOTOS 1000001
 #define MIN_VOTOS 0
+
 //declaracion de funciones
 
 void PideNombres(string nomcandidatosa[NOMBRE_CANDIDATOS]); //pide nombres de candidatos
@@ -40,8 +41,11 @@ int main()
     PideNombres(nomcandidatob);
     system("cls");
     srand(getpid());
-
+    char opcion;
+    bool repetir=true;
     //Imprime tabla de partido republicano
+
+    do{
 
     cout << "\n";
     cout << "              Partido Republicano" << endl;
@@ -185,6 +189,14 @@ int main()
     {
         cout << "El partido con menos votos fue de " << nomcandidatob[4] << " con un total de: " << totale << endl;
     }
+
+    cout << "Desea otro calculo (s/n)? ";
+        cin >> opcion;
+        system("cls");
+        if (opcion == 'n') {
+            repetir = false;    // Si la opción es 'n', se termina el bucle
+        }
+    } while (repetir);
 
     cout << "\n";
     return 0;
