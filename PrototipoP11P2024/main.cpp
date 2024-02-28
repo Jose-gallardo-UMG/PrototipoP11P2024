@@ -6,7 +6,7 @@
 
 //declaracion de librerias
 
-#include <iostream> // Librería de entrada y salida en C++
+#include <iostream>
 #include <string>
 #include <cstdlib>
 #include <iomanip>
@@ -18,8 +18,8 @@ using namespace std;
 
 #define NOMBRE_CANDIDATOS 5
 #define NUMERO_ANOS 4
-#define MAX_VOTOS 1000001
-
+#define MAXIMO_VOTOS 1000001
+#define MIN_VOTOS 0
 //declaracion de funciones
 
 void PideNombres(string nomcandidatosa[NOMBRE_CANDIDATOS]); //pide nombres de candidatos
@@ -208,7 +208,7 @@ void PideNombres(string nomcandidatosa[NOMBRE_CANDIDATOS])
 
 int generarNumAle()
 {
-    return rand() % MAX_VOTOS;
+    return rand() % MAXIMO_VOTOS;
 }
 
 void imprimirMatrizLinea()
